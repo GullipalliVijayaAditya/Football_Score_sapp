@@ -1,18 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLinearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:background="@android:color/white">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-</android.support.constraint.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/stopwatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#2e1c69"
+                android:gravity="center"
+                android:text="@string/default_stopwatch_value"
+                android:textColor="@color/colorAccent"
+                android:textSize="72sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#295fc4"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/playButton"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_weight="1"
+                    android:onClick="updateStopwatch"
+                    android:tint="@android:color/background_light"
+                    app:srcCompat="@drawable/whistle" />
+
+
+
+                <ImageButton
+                    android:id="@+id/resetButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:onClick="resetScoreCounters"
+                    app:srcCompat="@android:drawable/ic_popup_sync" />
+
+
+                <ImageButton
+                    android:id="@+id/addTimeButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:tint="@android:color/background_light"
+                    app:srcCompat="@drawable/stopwatchnew" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
