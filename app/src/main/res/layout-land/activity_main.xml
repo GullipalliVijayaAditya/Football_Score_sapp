@@ -43,6 +43,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="1"
+                android:contentDescription="@string/description"
                 android:onClick="updateStopwatch"
                 android:tint="@android:color/background_light"
                 app:srcCompat="@drawable/whistle" />
@@ -51,6 +52,7 @@
             <ImageButton
                 android:id="@+id/resetButton"
                 android:layout_width="0dp"
+                android:contentDescription="@string/description"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="1"
@@ -62,6 +64,7 @@
                 android:id="@+id/addTimeButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:contentDescription="@string/description"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:enabled="false"
@@ -122,13 +125,12 @@
 
                     </LinearLayout>
 
-                    <!-- HORIZONTAL LINEAR LAYOUT FOR SCORE VIEWS DIVIDED BY 2 COLUMNS FOR TEAM A AND TEAM B-->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
-                        <!-- FIRST COLUMN: FOR SCORES TEAM A -->
+                        <!--TEAM A -->
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -189,7 +191,7 @@
 
                         <View style="@style/VerticalDivider" />
 
-                        <!-- PASTE SCORES VIEWS FOR TEAM B -->
+                        <!--TEAM B -->
 
                         <LinearLayout
                             android:layout_width="0dp"
@@ -265,6 +267,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:baselineAligned="false"
             android:orientation="vertical">
 
             <!-- CONTENT IN 2ND COLUMN -->
@@ -274,6 +277,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:baselineAligned="false"
                 android:orientation="horizontal">
 
                 <!-- PUT HERE BUTTONS FOR [TEAM A] || [TEAM B] IN HORIZONTAL LINEAR LAYOUT -->
@@ -283,6 +287,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:baselineAligned="false"
                     android:orientation="vertical"
                     tools:context="com.example.android.courtcounter.MainActivity">
 
@@ -317,6 +322,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:enabled="false"
+                            android:contentDescription="@string/description"
                             android:onClick="addOneYellowCardForTeamA"
                             android:tint="@color/yellowCardColor"
                             app:srcCompat="@drawable/card" />
@@ -328,6 +334,7 @@
                             android:layout_weight="1"
                             android:enabled="false"
                             android:onClick="addOneRedCardForTeamA"
+                            android:contentDescription="@string/description"
                             android:tint="@color/redCardColor"
                             app:srcCompat="@drawable/card" />
 
@@ -375,6 +382,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:contentDescription="@string/description"
                             android:enabled="false"
                             android:onClick="addOneYellowCardForTeamB"
                             android:tint="@color/yellowCardColor"
@@ -385,6 +393,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:contentDescription="@string/description"
                             android:enabled="false"
                             android:onClick="addOneRedCardForTeamB"
                             android:tint="@color/redCardColor"
