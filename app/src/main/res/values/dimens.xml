@@ -8,9 +8,9 @@
     <dimen name="score_button_margin_vertical">8dp</dimen>
     <dimen name="score_margin_bottom_vertical">24dp</dimen>
     <dimen name="team_name_margin_vertical">16dp</dimen>
-    <dimen name="team_font_size">14sp</dimen>
-    <dimen name="score_font_size">75dp</dimen>
-    <dimen name="card_size">40sp</dimen>
+    <dimen name="team_font_size">20sp</dimen>
+    <dimen name="score_font_size">80sp</dimen>
+    <dimen name="card_text_size">40sp</dimen>
     <dimen name="dividers_thickness">1dp</dimen>
     <dimen name="padding_for_bord_buttons_icons">18dp</dimen>
 </resources>

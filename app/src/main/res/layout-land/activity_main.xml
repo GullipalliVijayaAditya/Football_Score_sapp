@@ -21,7 +21,7 @@
         <TextView
             android:id="@+id/stopwatch"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@color/backgroundColorForClock"
             android:gravity="center"
@@ -273,7 +273,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <!-- PUT HERE BUTTONS FOR [TEAM A] || [TEAM B] IN HORIZONTAL LINEAR LAYOUT -->

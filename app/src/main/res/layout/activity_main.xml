@@ -15,15 +15,11 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/stopwatch"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:background="@color/backgroundColorForClock"
                     android:gravity="center"
                     android:text="@string/default_stopwatch_value"
@@ -67,18 +63,16 @@
 
                 </LinearLayout>
 
-            </LinearLayout>
 
         </LinearLayout>
 
-        <!-- TEAM A -->
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
-
+<!--Team A-->
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -192,7 +186,9 @@
 
             </LinearLayout>
 
+            <View style="@style/VerticalDivider" />
 
+            <!--Team B-->
 
             <LinearLayout
                 android:layout_width="0dp"

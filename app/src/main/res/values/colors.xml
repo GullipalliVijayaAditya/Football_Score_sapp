@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#27f0f0</color>
-    <color name="colorPrimaryDark">#2bd6d7</color>
+    <color name="colorPrimaryDark">#c2ffff</color>
     <color name="colorAccent">#663956</color>
     <color name="scoreColor">#025059</color>
     <color name="teamFontColor">#10b6bf</color>
