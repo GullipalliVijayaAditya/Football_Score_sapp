@@ -24,7 +24,7 @@
                     android:id="@+id/stopwatch"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/backgroundColorForButtons"
+                    android:background="@color/backgroundColorForClock"
                     android:gravity="center"
                     android:text="@string/default_stopwatch_value"
                     android:textColor="@color/colorAccent"
@@ -133,7 +133,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/default_yellow_card_amount_team_a"
-                            android:layout_margin="10dp"
+                            android:layout_margin="10dp" android:textStyle="bold"
                             android:textColor="@color/yellowCardColor" />
 
 
@@ -141,7 +141,7 @@
                             android:id="@+id/team_a_red_card"
                             style="@style/CardTextView"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="wrap_content" android:textStyle="bold"
                             android:text="@string/default_red_card_amount_team_a"
                             android:layout_margin="10dp"
                             android:textColor="@color/redCardColor" />
@@ -248,6 +248,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/default_yellow_card_amount_team_b"
                             android:layout_margin="10dp"
+                            android:textStyle="bold"
                             android:textColor="@color/yellowCardColor" />
 
 
@@ -256,7 +257,7 @@
                             style="@style/CardTextView"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
+                            android:layout_margin="10dp" android:textStyle="bold"
                             android:text="@string/default_red_card_amount_team_b"
                             android:textColor="@color/redCardColor" />
 
