@@ -26,7 +26,6 @@
             android:textSize="72sp" />
 
 
-
         <!-- STOPWATCH BUUTONS -->
         <LinearLayout
             android:layout_width="0dp"
@@ -44,18 +43,18 @@
                 android:background="@drawable/bg_button"
                 android:gravity="center"
                 android:onClick="updateStopwatch"
-                android:textColor="@color/colorAccent"
-                android:text="@string/start" />
+                android:text="@string/start"
+                android:textColor="@color/colorAccent" />
 
 
             <TextView
                 android:id="@+id/resetButton"
-                android:contentDescription="@string/description"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:enabled="false"
                 android:background="@drawable/bg_button"
+                android:contentDescription="@string/description"
+                android:enabled="false"
                 android:gravity="center"
                 android:onClick="resetScoreCounters"
                 android:text="@string/reset" />
@@ -64,11 +63,11 @@
             <TextView
                 android:id="@+id/addTimeButton"
                 android:layout_width="0dp"
-                android:gravity="center"
                 android:layout_height="match_parent"
-                android:background="@drawable/bg_button"
                 android:layout_weight="1"
+                android:background="@drawable/bg_button"
                 android:enabled="false"
+                android:gravity="center"
                 android:text="@string/addtime"
 
                 />
@@ -329,8 +328,8 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:enabled="false"
                             android:contentDescription="@string/description"
+                            android:enabled="false"
                             android:onClick="addOneYellowCardForTeamA"
                             android:tint="@color/yellowCardColor"
                             app:srcCompat="@drawable/card" />
@@ -340,9 +339,9 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:contentDescription="@string/description"
                             android:enabled="false"
                             android:onClick="addOneRedCardForTeamA"
-                            android:contentDescription="@string/description"
                             android:tint="@color/redCardColor"
                             app:srcCompat="@drawable/card" />
 

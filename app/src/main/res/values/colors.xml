@@ -8,7 +8,7 @@
     <color name="colorButton">#0802fe</color>
     <color name="yellowCardColor">#ffff03</color>
     <color name="redCardColor">#ff0000</color>
-    <color name="backgroundColorForButtons">#0802fe</color>
+    <color name="backgroundColorForButtons">#627bff</color>
     <color name="backgroundColorForClock">#0802fe</color>
 
 </resources>

@@ -11,14 +11,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.support.v7.widget.Toolbar;
 import android.widget.ImageButton;
-
 import android.widget.NumberPicker;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
+// Created By Vijaya Aditya on June-2018 for Udacity Score Keeper App Project.
 
 public class MainActivity extends AppCompatActivity implements StopWatchInterface, NumberPicker.OnValueChangeListener {
 
@@ -52,7 +50,6 @@ public class MainActivity extends AppCompatActivity implements StopWatchInterfac
     private TimeCalculator stopWatch;
     // Status of buttons
     private boolean statusOfButtons = false;
-
 
 
     @Override
