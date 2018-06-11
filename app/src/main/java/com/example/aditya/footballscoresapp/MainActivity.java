@@ -11,10 +11,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.support.v7.widget.Toolbar;
 import android.widget.ImageButton;
+
 import android.widget.NumberPicker;
 import android.widget.TextView;
 import android.widget.Toast;
+
 
 
 public class MainActivity extends AppCompatActivity implements StopWatchInterface, NumberPicker.OnValueChangeListener {
@@ -49,6 +52,8 @@ public class MainActivity extends AppCompatActivity implements StopWatchInterfac
     private TimeCalculator stopWatch;
     // Status of buttons
     private boolean statusOfButtons = false;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,7 +109,7 @@ public class MainActivity extends AppCompatActivity implements StopWatchInterfac
         enableButtons(statusOfButtons);
 
         // Opening dialog by clicking on button for adding additional time for stopwatch
-        ImageButton additionalTimeButton = (ImageButton) findViewById(R.id.addTimeButton);
+        TextView additionalTimeButton = (TextView) findViewById(R.id.addTimeButton);
 
         additionalTimeButton.setOnClickListener(new View.OnClickListener() {
 
@@ -377,9 +382,9 @@ public class MainActivity extends AppCompatActivity implements StopWatchInterfac
     public void enableButtons(boolean status) {
 
         // Top Buttons
-        ImageButton playButton = (ImageButton) findViewById(R.id.playButton);
-        ImageButton resetButton = (ImageButton) findViewById(R.id.resetButton);
-        ImageButton addTimeButton = (ImageButton) findViewById(R.id.addTimeButton);
+        TextView playButton = (TextView) findViewById(R.id.playButton);
+        TextView resetButton = (TextView) findViewById(R.id.resetButton);
+        TextView addTimeButton = (TextView) findViewById(R.id.addTimeButton);
 
         // Team A Buttons
         Button goalForTeamAButton = (Button) findViewById(R.id.goalForTeamAButton);
@@ -406,8 +411,8 @@ public class MainActivity extends AppCompatActivity implements StopWatchInterfac
 
         // Change color of buttons if are enabled/disabled
         if (!status) {
-            resetButton.setColorFilter(Color.GRAY, PorterDuff.Mode.SRC_IN);
-            addTimeButton.setColorFilter(Color.GRAY, PorterDuff.Mode.SRC_IN);
+            resetButton.setTextColor(Color.GRAY);
+            addTimeButton.setTextColor(Color.GRAY);
             goalForTeamAButton.setTextColor(Color.GRAY);
             yellowCardAddButtonTeamA.setColorFilter(Color.GRAY, PorterDuff.Mode.SRC_IN);
             redCardAddButtonTeamA.setColorFilter(Color.GRAY, PorterDuff.Mode.SRC_IN);
@@ -415,8 +420,8 @@ public class MainActivity extends AppCompatActivity implements StopWatchInterfac
             yellowCardButtonTeamB.setColorFilter(Color.GRAY, PorterDuff.Mode.SRC_IN);
             redCardButtonTeamB.setColorFilter(Color.GRAY, PorterDuff.Mode.SRC_IN);
         } else {
-            resetButton.clearColorFilter();
-            addTimeButton.clearColorFilter();
+            resetButton.setTextColor(Color.WHITE);
+            addTimeButton.setTextColor(Color.WHITE);
             goalForTeamAButton.setTextColor(Color.WHITE);
             yellowCardAddButtonTeamA.clearColorFilter();
             redCardAddButtonTeamA.clearColorFilter();

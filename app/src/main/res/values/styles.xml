@@ -6,7 +6,10 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <!-- Background color of buttons in the app -->
         <item name="colorButtonNormal">@color/colorButton</item>
+
+
     </style>
+
 
     <style name="TeamNameTextView" parent="AppTheme">
         <item name="android:textSize">@dimen/team_font_size</item>
@@ -30,7 +33,10 @@
         <item name="android:layout_width">@dimen/dividers_thickness</item>
         <item name="android:layout_height">match_parent</item>
 
+
     </style>
+
+
 
     <style name="VerticalDividerForLandscapeView">
         <item name="android:background">#000</item>

@@ -32,37 +32,42 @@
             android:background="@color/backgroundColorForButtons"
             android:orientation="horizontal">
 
-            <ImageButton
+            <TextView
                 android:id="@+id/playButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:contentDescription="@string/description"
                 android:layout_weight="1"
+                android:padding="10dp"
+                android:background="@drawable/bg_button"
+                android:gravity="center"
                 android:onClick="updateStopwatch"
-                android:tint="@android:color/background_light"
-                app:srcCompat="@drawable/whistle" />
+                android:textColor="@color/colorAccent"
+             android:text="@string/start" />
 
 
-            <ImageButton
+            <TextView
                 android:id="@+id/resetButton"
-                android:contentDescription="@string/description"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:enabled="false"
+                android:background="@drawable/bg_button"
+                android:gravity="center"
                 android:onClick="resetScoreCounters"
-                app:srcCompat="@android:drawable/ic_popup_sync" />
+                android:text="@string/reset" />
 
 
-            <ImageButton
+            <TextView
                 android:id="@+id/addTimeButton"
                 android:layout_width="0dp"
+                android:background="@drawable/bg_button"
+                android:gravity="center"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:contentDescription="@string/description"
                 android:enabled="false"
-                android:tint="@android:color/background_light"
-                app:srcCompat="@drawable/stopwatchnew" />
+                android:text="@string/addtime"
+
+                 />
 
         </LinearLayout>
 
