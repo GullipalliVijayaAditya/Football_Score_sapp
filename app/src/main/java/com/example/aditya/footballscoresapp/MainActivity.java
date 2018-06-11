@@ -1,7 +1,6 @@
 package com.example.aditya.footballscoresapp;
 
 
-
 import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Color;
@@ -18,15 +17,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-
-
 public class MainActivity extends AppCompatActivity implements StopWatchInterface, NumberPicker.OnValueChangeListener {
 
 
-    // FOR YOUR INFORMATION:
     // TEAM A -> Hosts
     // TEAM B -> Guests
-
 
     private static Dialog myDialog;
 
@@ -55,15 +50,10 @@ public class MainActivity extends AppCompatActivity implements StopWatchInterfac
     // Status of buttons
     private boolean statusOfButtons = false;
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
-        // *** RECOVERING THE INSTANCE STATE
         if (savedInstanceState != null) {
             // Team A
             scoreTeamA = savedInstanceState.getInt("TEAM_A_SCORE");
@@ -81,7 +71,7 @@ public class MainActivity extends AppCompatActivity implements StopWatchInterfac
 
         setContentView(R.layout.activity_main);
 
-        // *** DECLARATION TEXT VIEWS SO WE CAN MANIPULATE THEM LATER
+
         // Team A
         teamAScoreTextView = (TextView) findViewById(R.id.team_a_score);
         teamAYellowCardTextView = (TextView) findViewById(R.id.team_a_yellow_card);
@@ -96,7 +86,6 @@ public class MainActivity extends AppCompatActivity implements StopWatchInterfac
         stopwatchTextView = (TextView) findViewById(R.id.stopwatch);
 
 
-        // *** Creating a new custom Typeface
         // For digits of counters
         Typeface counterCustomFont = Typeface.createFromAsset(getAssets(), "fonts/KARNIVOD.ttf");
         teamAScoreTextView.setTypeface(counterCustomFont);
@@ -124,8 +113,6 @@ public class MainActivity extends AppCompatActivity implements StopWatchInterfac
                 show();
             }
         });
-
-
     }
 
     @Override
@@ -192,6 +179,13 @@ public class MainActivity extends AppCompatActivity implements StopWatchInterfac
         super.onSaveInstanceState(outState);
     }
 
+    @Override
+    protected void onDestroy() {
+        if (stopWatch != null) {
+            stopWatch.Stop();
+        }
+        super.onDestroy();
+    }
 
     @Override
     protected void onRestart() {
@@ -200,7 +194,6 @@ public class MainActivity extends AppCompatActivity implements StopWatchInterfac
     }
 
 
-    // *** LOGIC TO BUTTONS AND VIEWS
     //TEAM A
 
     @Override
@@ -228,8 +221,6 @@ public class MainActivity extends AppCompatActivity implements StopWatchInterfac
 
     /**
      * Displays the given score for Team A.
-     *
-     * @param score - amount of achieved goals
      */
     public void displayForTeamA(int score) {
         TextView scoreView = (TextView) findViewById(R.id.team_a_score);
@@ -244,9 +235,7 @@ public class MainActivity extends AppCompatActivity implements StopWatchInterfac
         displayForTeamA(scoreTeamA);
     }
 
-    /**
-     * @param amountYellowCard Displays the given amount of yellow cards for Team A.
-     */
+
     public void displayYellowCardsForTeamA(int amountYellowCard) {
         TextView scoreView = (TextView) findViewById(R.id.team_a_yellow_card);
         scoreView.setText(String.valueOf(amountYellowCard));
@@ -260,15 +249,12 @@ public class MainActivity extends AppCompatActivity implements StopWatchInterfac
         displayYellowCardsForTeamA(amountOfYellowCardsTeamA);
     }
 
-    /**
-     * @param amountOfRedCards Displays the given amount of red cards for Team A.
-     */
+
     public void displayRedCardsForTeamA(int amountOfRedCards) {
         TextView scoreView = (TextView) findViewById(R.id.team_a_red_card);
         scoreView.setText(String.valueOf(amountOfRedCards));
     }
 
-    //TEAM B
 
     /**
      * Increase Team A's amount of red cards by 1
@@ -280,8 +266,6 @@ public class MainActivity extends AppCompatActivity implements StopWatchInterfac
 
     /**
      * Displays the given score for Team B.
-     *
-     * @param score - amount of achieved goals
      */
     public void displayForTeamB(int score) {
         TextView scoreView = (TextView) findViewById(R.id.team_b_score);
@@ -296,9 +280,7 @@ public class MainActivity extends AppCompatActivity implements StopWatchInterfac
         displayForTeamB(scoreTeamB);
     }
 
-    /**
-     * @param amountYellowCard Displays the given amount of yellow cards for Team B.
-     */
+
     public void displayYellowCardsForTeamB(int amountYellowCard) {
         TextView scoreView = (TextView) findViewById(R.id.team_b_yellow_card);
         scoreView.setText(String.valueOf(amountYellowCard));
@@ -312,9 +294,7 @@ public class MainActivity extends AppCompatActivity implements StopWatchInterfac
         displayYellowCardsForTeamB(amountOfYellowCardsTeamB);
     }
 
-    /**
-     * @param amountOfRedCards Displays the given amount of red cards for Team B.
-     */
+
     public void displayRedCardsForTeamB(int amountOfRedCards) {
         TextView scoreView = (TextView) findViewById(R.id.team_b_red_card);
         scoreView.setText(String.valueOf(amountOfRedCards));
@@ -358,13 +338,10 @@ public class MainActivity extends AppCompatActivity implements StopWatchInterfac
 
     /**
      * Displays stopwatch.
-     *
-     * @param stopwatchCurrentTime - current time in [ms] unit
      */
     public void displayStopwatchTime(String stopwatchCurrentTime) {
         TextView stopwatchTextView = (TextView) findViewById((R.id.stopwatch));
         stopwatchTextView.setText(stopwatchCurrentTime);
-
     }
 
     /**
@@ -384,13 +361,9 @@ public class MainActivity extends AppCompatActivity implements StopWatchInterfac
             isRunning = true;
             stopWatch = new TimeCalculator(this);
             stopWatch.execute();
-
-        }else{
-
-            onPause();
         }
     }
-    @Override
+
     /**
      * After end of time set flat isRunning to false
      */
@@ -402,7 +375,7 @@ public class MainActivity extends AppCompatActivity implements StopWatchInterfac
      * After clicking PLAY button, make buttons active
      */
     public void enableButtons(boolean status) {
-        // *** BUTTONS MAPPING
+
         // Top Buttons
         ImageButton playButton = (ImageButton) findViewById(R.id.playButton);
         ImageButton resetButton = (ImageButton) findViewById(R.id.resetButton);
@@ -443,7 +416,6 @@ public class MainActivity extends AppCompatActivity implements StopWatchInterfac
             redCardButtonTeamB.setColorFilter(Color.GRAY, PorterDuff.Mode.SRC_IN);
         } else {
             resetButton.clearColorFilter();
-
             addTimeButton.clearColorFilter();
             goalForTeamAButton.setTextColor(Color.WHITE);
             yellowCardAddButtonTeamA.clearColorFilter();
@@ -452,12 +424,11 @@ public class MainActivity extends AppCompatActivity implements StopWatchInterfac
             yellowCardButtonTeamB.clearColorFilter();
             redCardButtonTeamB.clearColorFilter();
         }
-
-
     }
 
-
 }
+
+
 
 
 

@@ -3,7 +3,6 @@ package com.example.aditya.footballscoresapp;
 import android.os.AsyncTask;
 
 
-
 class TimeCalculator extends AsyncTask<Void, String, Void> {
     private long start;
     private StopWatchInterface stopWatchInterface;
@@ -14,7 +13,7 @@ class TimeCalculator extends AsyncTask<Void, String, Void> {
     // in some situations there may be a need for extra time which is 2 (15 minute halves).
     // So a regular match lasts 90 minutes plus any additional time.
 
-    private int defaultTime = 5400000 ; //unit: [milliseconds] = 90 minuets
+    private int defaultTime = 5400000; //unit: [milliseconds] = 90 minuets
     private int destinationTime = 0;
 
     TimeCalculator(StopWatchInterface swInterface) {
@@ -74,10 +73,12 @@ class TimeCalculator extends AsyncTask<Void, String, Void> {
         }
         return null;
     }
+
     void setAdditionalTime(int additionalSeconds) {
         int stopwatchAdditionalTime = additionalSeconds * 60000;
         destinationTime = defaultTime + stopwatchAdditionalTime;
     }
+
     private void checkTimeRule() {
         if (currentTime >= defaultTime) {
             if (currentTime > destinationTime) {

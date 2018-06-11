@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#27f0f0</color>
-    <color name="colorPrimaryDark">#c2ffff</color>
-    <color name="colorAccent">#663956</color>
-    <color name="scoreColor">#025059</color>
-    <color name="teamFontColor">#10b6bf</color>
-    <color name="colorButton">#1985bd</color>
+    <color name="colorPrimary">#0802fe</color>
+    <color name="colorPrimaryDark">#0802f7</color>
+    <color name="colorAccent">#ffffff</color>
+    <color name="scoreColor">#0802fe</color>
+    <color name="teamFontColor">#073d97</color>
+    <color name="colorButton">#0802fe</color>
     <color name="yellowCardColor">#ffff03</color>
     <color name="redCardColor">#ff0000</color>
-    <color name="backgroundColorForButtons">#155781</color>
-    <color name="backgroundColorForClock">#0a2f40</color>
+    <color name="backgroundColorForButtons">#0802fe</color>
+    <color name="backgroundColorForClock">#0802fe</color>
 
 </resources>

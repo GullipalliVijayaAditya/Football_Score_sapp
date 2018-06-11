@@ -7,10 +7,6 @@
     android:layout_height="match_parent"
     android:background="@android:color/white">
 
-    <!-- MAIN LINEAR LAYOUT DIVIDING SCREEN BY 2 COLUMNS -->
-
-
-    <!-- HEADER: [STOPWATCH] | [STOPWATCH'S BUTTONS] -->
 
     <LinearLayout
         android:id="@+id/header"
@@ -165,13 +161,15 @@
                                 android:layout_margin="10dp"
                                 android:orientation="horizontal"
                                 android:gravity="center_vertical">
+
                                 <TextView
                                     android:id="@+id/team_a_yellow_card"
                                     style="@style/CardTextView"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="@string/default_yellow_card_amount_team_a"
-                                    android:layout_margin="10dp" android:textStyle="bold"
+                                    android:layout_margin="10dp"
+                                    android:textStyle="bold"
                                     android:textColor="@color/yellowCardColor" />
 
 
@@ -179,7 +177,8 @@
                                     android:id="@+id/team_a_red_card"
                                     style="@style/CardTextView"
                                     android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content" android:textStyle="bold"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="bold"
                                     android:text="@string/default_red_card_amount_team_a"
                                     android:layout_margin="10dp"
                                     android:textColor="@color/redCardColor" />
@@ -227,13 +226,15 @@
                                 android:layout_margin="10dp"
                                 android:orientation="horizontal"
                                 android:gravity="center_vertical">
+
                                 <TextView
                                     android:id="@+id/team_b_yellow_card"
                                     style="@style/CardTextView"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="@string/default_yellow_card_amount_team_a"
-                                    android:layout_margin="10dp" android:textStyle="bold"
+                                    android:layout_margin="10dp"
+                                    android:textStyle="bold"
                                     android:textColor="@color/yellowCardColor" />
 
 
@@ -241,7 +242,8 @@
                                     android:id="@+id/team_b_red_card"
                                     style="@style/CardTextView"
                                     android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content" android:textStyle="bold"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="bold"
                                     android:text="@string/default_red_card_amount_team_a"
                                     android:layout_margin="10dp"
                                     android:textColor="@color/redCardColor" />
@@ -358,7 +360,7 @@
                         android:gravity="center"
                         android:text="@string/second_team" />
 
-                    <!-- OLD: SCORES FOR TEAM B -->
+                    <!-- TEAM B -->
 
                     <Button
                         android:id="@+id/goalForTeamBButton"
