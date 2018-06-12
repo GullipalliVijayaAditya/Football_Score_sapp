@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Primary theme color of the app (sets background color of app bar) -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <!-- Background color of buttons in the app -->
@@ -51,6 +51,7 @@
         <item name="android:layout_marginBottom">@dimen/score_button_margin_vertical</item>
         <item name="android:layout_marginTop">@dimen/score_margin_bottom_vertical</item>
     </style>
+
 
 
 </resources>
