@@ -1,7 +1,6 @@
 package com.example.aditya.footballscoresapp;
 
 
-import android.app.Activity;
 import android.app.Dialog;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
@@ -35,7 +34,7 @@ import java.io.FileOutputStream;
 
 // Created By Vijaya Aditya on June-2018 for Udacity Score Keeper App Project.
 
-public class MainActivity extends Activity implements StopWatchInterface, NumberPicker.OnValueChangeListener {
+public class MainActivity extends AppCompatActivity implements StopWatchInterface, NumberPicker.OnValueChangeListener {
 
 
     private ShareActionProvider mShareActionProvider;
