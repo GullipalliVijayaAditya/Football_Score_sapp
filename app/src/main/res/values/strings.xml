@@ -14,14 +14,12 @@
     <string name="default_red_card_amount_team_b">0</string>
     <string name="title_of_additional_time_picker">NumberPicker</string>
     <string name="default_time_value">00:00</string>
-    <string name="description"></string>
+    <string name="description"> </string>
     <string name="addtime">Add Time</string>
     <string name="reset">Reset</string>
     <string name="start">Start</string>
     <string name="cancel_button_name">Cancel</string>
     <string name="set_button_name">Set</string>
-    <string name="night_mode">Night Mode</string>
-    <string name="day_mode">Day Mode</string>
 </resources>
 
 

@@ -1,28 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-
-<LinearLayout
     android:id="@+id/mainLinearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
+    android:fitsSystemWindows="false"
     android:orientation="vertical">
+
 
     <LinearLayout
         android:id="@+id/counterSection"
         android:layout_width="match_parent"
-
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/stopwatch"
+            android:textStyle="bold"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/backgroundColorForClock"
@@ -46,6 +41,7 @@
                 android:gravity="center"
                 android:onClick="updateStopwatch"
                 android:padding="10dp"
+                android:textStyle="bold"
                 android:text="@string/start"
                 android:textColor="@color/colorAccent" />
 
@@ -57,6 +53,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/bg_button"
                 android:enabled="false"
+                android:textStyle="bold"
                 android:gravity="center"
                 android:onClick="resetScoreCounters"
                 android:text="@string/reset" />
@@ -69,6 +66,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/bg_button"
                 android:enabled="false"
+                android:textStyle="bold"
                 android:gravity="center"
                 android:text="@string/addtime"
 
@@ -144,6 +142,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:text="@string/default_yellow_card_amount_team_a"
+
                         android:textColor="@color/yellowCardColor"
                         android:textStyle="bold" />
 
@@ -207,9 +206,7 @@
         </LinearLayout>
 
 
-        <View
-            style="@style/VerticalDivider"
-            />
+        <View style="@style/VerticalDivider" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -223,6 +220,7 @@
                 style="@style/TeamNameTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textStyle="bold"
                 android:gravity="center"
                 android:text="@string/second_team" />
 
@@ -246,6 +244,7 @@
                         android:gravity="center_horizontal"
                         android:padding="10dp"
                         android:text="@string/default_score_team_b"
+                        android:textStyle="bold"
                         android:textAlignment="center" />
 
                 </LinearLayout>
@@ -333,6 +332,5 @@
 </LinearLayout>
 
 
-</RelativeLayout>
 
 

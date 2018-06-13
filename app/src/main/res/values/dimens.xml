@@ -12,6 +12,10 @@
     <dimen name="team_font_size">20sp</dimen>
     <dimen name="score_font_size">80sp</dimen>
     <dimen name="card_text_size">40sp</dimen>
+    <dimen name="zerodp">0dp</dimen>
+    <dimen name="tendp">10dp</dimen>
+    <dimen name="fourdp">4dp</dimen>
+    <dimen name="fiftydp">50dp</dimen>
     <dimen name="dividers_thickness">1dp</dimen>
     <dimen name="padding_for_bord_buttons_icons">18dp</dimen>
 </resources>

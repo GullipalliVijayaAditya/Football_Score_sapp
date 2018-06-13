@@ -1,43 +1,28 @@
 package com.example.aditya.footballscoresapp;
 
-
+import android.app.AlertDialog;
 import android.app.Dialog;
-import android.content.ActivityNotFoundException;
 import android.content.Context;
-import android.content.Intent;
-import android.graphics.Bitmap;
+import android.content.DialogInterface;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.Typeface;
-import android.media.Image;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.app.AppCompatDelegate;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.NumberPicker;
-import android.widget.PopupMenu;
-import android.widget.ShareActionProvider;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.File;
-import java.io.FileOutputStream;
 
 // Created By Vijaya Aditya on June-2018 for Udacity Score Keeper App Project.
 
 public class MainActivity extends AppCompatActivity implements StopWatchInterface, NumberPicker.OnValueChangeListener {
 
-
-    private ShareActionProvider mShareActionProvider;
 
     // TEAM A -> Hosts
     // TEAM B -> Guests
@@ -69,11 +54,20 @@ public class MainActivity extends AppCompatActivity implements StopWatchInterfac
     // Status of buttons
     private boolean statusOfButtons = false;
 
-
-
+    public static void hideSystemUI(Window window) {
+        window.getDecorView().setSystemUiVisibility(
+                View.SYSTEM_UI_FLAG_FULLSCREEN
+                        | View.SYSTEM_UI_FLAG_LOW_PROFILE
+                        | View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                        | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+                        | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                        | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+        );
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        hideSystemUI(getWindow());
         super.onCreate(savedInstanceState);
 
         if (savedInstanceState != null) {
@@ -91,8 +85,8 @@ public class MainActivity extends AppCompatActivity implements StopWatchInterfac
             additionalTime = savedInstanceState.getInt("ADDITIONAL_TIME");
         }
 
-        setContentView(R.layout.activity_main);
 
+        setContentView(R.layout.activity_main);
 
 
         // Team A
@@ -136,6 +130,12 @@ public class MainActivity extends AppCompatActivity implements StopWatchInterfac
                 show();
             }
         });
+    }
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        hideSystemUI(getWindow());
     }
 
     @Override
@@ -215,6 +215,7 @@ public class MainActivity extends AppCompatActivity implements StopWatchInterfac
         super.onRestart();
         enableButtons(statusOfButtons);
     }
+
 
     //TEAM A
 
@@ -413,6 +414,7 @@ public class MainActivity extends AppCompatActivity implements StopWatchInterfac
         ImageButton yellowCardButtonTeamB = (ImageButton) findViewById(R.id.yellow_card_add_button_team_b);
         ImageButton redCardButtonTeamB = (ImageButton) findViewById(R.id.red_card_add_button_team_b);
 
+
         // Set status for fields
         playButton.setEnabled(true);
 
@@ -447,4 +449,30 @@ public class MainActivity extends AppCompatActivity implements StopWatchInterfac
         }
     }
 
+    @Override
+    public void onBackPressed() {
+
+        new AlertDialog.Builder(this)
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setTitle("Exit")
+                .setMessage("Exiting this app will loose your score, Press Home button to run the app in background or If you want to exit press yes")
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                    }
+
+                })
+                .setNegativeButton("No", null)
+                .show();
+    }
+
+
 }
+
+
+
+
+
+
+
